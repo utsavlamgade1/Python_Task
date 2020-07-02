@@ -1,71 +1,166 @@
-#Question 1
-a,b,c = 1,2.23,"Catherine"
+# Task Two
+# Question1
 
-print(a)
-print(b)
-print(c)
+x = 52
 
-#Question 2
-a= (33+33j)
-b=12345
+if x%3==0 and x%5==0:
+    print ("Consultadd Python Training")
 
-a,b = b,a
+elif x%3==0:
+    print("Consultadd")
 
-print(a)
-print(b)
+elif x%5==0:
+    print('c')
 
-#Question 3
-#Part 1 Swap two numbers using the third variable as the result
-a, b = 10, 20
+else:
+    print('Sorry You got the wrong number!!')
 
-print(a)
-print(b)
+# Question2
 
-result = a
-a = b
-b = result
+choice  = input("Pick any one of among 1, 2, 3, 4 or 5: ")
+if choice in ('1','2','3','4','5'):
+    first = float(input("Enter your first number: "))
+    second = float(input("Enter your second number: "))
 
-print(a)
-print(b)
+    if choice == '1':
+        sum = first+second
+        print(sum)
+        if sum < 0:
+            print('Zsa')
 
-#Part 2 Swap two numbers withour using the third variable as the result
-a, b = 10, 20
+    if choice == '2':
+        subtraction = first-second
+        print(subtraction)
+        if subtraction < 0:
+            print('Zsa')
 
-a,b = b,a
+    if choice == '3':
+        division = first/second
+        print(division)
+        if division < 0:
+            print('Zsa')
 
-print(a)
-print(b)
+    if choice == '4':
+        multiplication = first*second
+        print(multiplication)
+        if multiplication < 0:
+            print('Zsa')
 
-#Question 4
-#Python 2.x
-y = raw_input("Give a value: ")
-print y
+    if choice == '5':
+        first1 = float(input("Enter your first1 number: "))
+        second2 = float(input("Enter your second2 number: "))
+        print("The average of the four numbers = ", (first+second+first1+second2)/4)
 
-#Python 3.x
-x = input("Give a Value: ")
-print(x)
+else:
+    print("Sorry Choose the right option please!!")
 
-#Question 5
-#task1
-x = int(input("Enter a number between 1 through 10: "))
-y = int(input("Enter a number between 1 through 10: "))
-z = x+y
-print(z)
 
-#task2
-result = (z+30)
-print(result)
+#Question3
 
-#Question 6
-entered_value = (input("Enter anything here: "))
-print (type(entered_value))
+age = 38
+if age >= 11:
+    print("You are eligible to see the Football Match")
+    if age <= 20 or age >= 60:
+        print("Ticket price is $12")
+    else:
+        print("Ticket price is $20")
+else:
+    print("You're not eligible to buy a ticket")
 
-#Question 7
-# If one data type value is assigned to ‘a’ variable and then a different data type value is assigned to ‘a’ again.
-# Will it change the value. If Yes then Why?
-'''Yes, it will change the value because we can change the value of variable how many times we what to change it doesn't
-matter if the given value is sting or integer or float. The last given value would be the answer
-for example
-x = 'Tower'
-x = 234
-if we print x the answer will be 234'''
+#Question4
+
+while True:
+    out = int(input('Enter the number: '))
+    if out < 0:
+        break
+    else:
+        print("Good Going")
+print('Its Over')
+
+#Question5
+
+for i in range(2000, 3200):
+    if (i%7==0) and (i%5!=0):
+        print(i)
+
+#Question6
+
+x = 123
+for i in x:
+    print(i)
+## OUTPUT TypeError: 'int' object is not iterable
+i = 0
+while i<5:
+    i += 1
+    if i == 3:
+        break
+else:
+    print('error')
+##OUTPUT is it will just run the while loop and break
+
+##Question7
+
+for x in range(6):
+    if (x==3 or x==6):
+        continue
+    print(x,end=" ")
+print("\n")
+
+##Question8
+
+countLetterAndNumber = (input("Enter Here: "))
+
+Digit = 0
+Letter = 0
+
+for i in range(len(countLetterAndNumber)):
+    if countLetterAndNumber[i].isalpha():
+        Letter = Letter + 1
+    if countLetterAndNumber[i].isdigit():
+        Digit = Digit + 1
+
+print("Letters", Letter)
+print("Digits", Digit)
+
+##Question 9
+
+#part 1
+num = int(input("Guess the lucky number "))
+while num != 28:
+    print("That is not the lucky number")
+
+#part 2
+num = -1
+again = "yes"
+while num !=28 and again != "no":
+    number = int(input("Guess the lucky number: "))
+    if number != num:
+        print("That is not the lucky number")
+        again = input("Would you like to guess again? ")
+
+##Question 10
+
+counter=1
+while counter<=5:
+    number = int(input("Guess the number: "))
+    if number !=22:
+        print("Try Again")
+    else:
+        print("Good Guess")
+    counter = counter + 1
+else:
+    print("Game Over")
+
+##Question11
+
+counter=1
+while counter<=5:
+    number = int(input("Guess the number: "))
+    if number !=22:
+        print("Try Again")
+    else:
+        print("Good Guess")
+        break
+    counter = counter + 1
+else:
+    print("Sorry but that was not very successful")
