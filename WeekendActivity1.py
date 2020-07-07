@@ -125,7 +125,7 @@ for i in li:
             a[i]=1
 print(a)
 
-##Question12 Generate and print another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10).
+##Question12  Generate and print another tuple whose values are even numbers in the given tuple (1,2,3,4,5,6,7,8,9,10).
 num = (1,2,3,4,5,6,7,8,9,10)
 even = []
 for i in num:
